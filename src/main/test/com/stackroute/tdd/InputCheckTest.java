@@ -12,31 +12,41 @@ public class InputCheckTest {
     @Before
     public void setUp() throws Exception {
 
-        in=new InputCheck();
+        in=new InputCheck();                                              //object creation
     }
 
     @Test
-    public void checkSymbol(){
+    public void testCheckSymbol(){
 
-        String result=in.characterCheck("+");
+        String result=in.characterCheck("+");                           // to check if the input is special symbol
         assertEquals("Special Symbols",result);
     }
 
     @Test
-    public void checkDigit(){
+    public void testCheckDigit(){
 
-        String result=in.characterCheck("1");
+        String result=in.characterCheck("1");                            // to check if the input is special symbol
         assertEquals("digit",result);
     }
 
     @Test
-    public void checkUppercase(){
+    public void testCheckUppercase(){
 
-        String result=in.characterCheck("A");
+        String result=in.characterCheck("A");                          //to check if uppercase
         assertEquals("upper Case",result);
     }
 
+    @Test
+    public void testCheckLowercase(){
+
+        String result=in.characterCheck("a");                         //to check if uppercase
+        assertEquals("Lower Case",result);
+    }
+
+
+
     @After
     public void tearDown() throws Exception {
+        in=null;
     }
 }

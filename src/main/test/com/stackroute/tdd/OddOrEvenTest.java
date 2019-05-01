@@ -7,24 +7,23 @@ import static org.junit.Assert.*;
 
 public class OddOrEvenTest {
 
-    OddOrEven oddeven=new OddOrEven();
+    OddOrEven oddeven;
 
     @Before
     public void setUp() {
-        oddeven=new OddOrEven();
+
+        oddeven=new OddOrEven();                                      //object creation
     }
 
     @Test
-    public void oddEven() {
-//        String expectedValue="Tom";
-//        String actualValue="Jerry";
+    public void testOddEven() {
           String result=oddeven.oddEven(23);
-          assertEquals("Tom",result);
+          assertEquals("Tom",result);                        //condition to check if its even
 
     }
     @Test
-    public void range() {
+    public void testRange() {
          String result=oddeven.oddEven(50);
-         assertEquals("Invalid",result);
+         assertEquals("Invalid",result);                    //condition to check if its even
     }
 }

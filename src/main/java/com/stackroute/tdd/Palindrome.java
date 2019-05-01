@@ -6,7 +6,7 @@ public class Palindrome {
         int i,j,flag=0,sum=0;
         int n=num;
         int length = String.valueOf(num).length();
-        int[] array = new int[num];                         // initialize the array
+        int[] array = new int[num];                              // initialize the array
         for (i = 0; i < length; i++) {                          // enter elements to array
             array[i] = num % 10;
             num = num / 10;
@@ -28,16 +28,13 @@ public class Palindrome {
                 }
             }
             if (sum > 25)                                           // checking sum is greater than 25
-//                System.out.println(n+" is palindrome and sum of even numbers is greater than 25");
                 return "palindrome nd sum>25";
 
             else
-//                System.out.println(n+" is palindrome and sum of even numbers is less than 25");
                 return "palindrome nd sum<25";
         }
 
         else{
-//            System.out.println(n + " is not palindrome");
             return "not palindrome";
         }
     }
